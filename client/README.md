@@ -1,8 +1,19 @@
-# React + Vite
+# Task Manager - Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React front-end interacts with the Node.js backend to provide a dynamic interface for the Task Manager. It accesses Firebase Cloud Storage exclusively for uploading and hosting Task assets (images/documents).
 
-Currently, two official plugins are available:
+## Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Copy the `.env.example` file to create your own local `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+3. Fill in your Backend URL and Firebase details in the new `.env` file. (Read the main `README.md` at the root of the project for a step-by-step guide on how to get your Firebase configuration keys and avoid CORS errors).
+4. Run the development server (Defaults to Port 3000):
+   ```bash
+   npm run dev
+   ```

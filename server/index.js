@@ -11,7 +11,7 @@ dotenv.config();
 
 dbConnection();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8800;
 
 const app = express();
 
