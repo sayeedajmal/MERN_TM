@@ -90,7 +90,12 @@ The Cloud-Based Task Manager is an innovative solution that brings efficiency an
 ### Scenario 1: First-Time User Setup & Registration
 1. **Open the App:** A user navigates to the app url (e.g. `http://localhost:3000`). They are greeted with the Login screen.
 2. **Sign Up:** If they don't have an account, they click "Sign Up" and provide their Name, Title, Email, and Password.
-3. **Admin Promotion (Required for Task Creation):** By default, new users are generated as standard workers. A database administrator must manually update a user's `isAdmin` flag to `true` in MongoDB to grant them Master control.
+3. **Initial Admin Promotion (Required for Full Access):** For security, all new users are registered as "Standard Workers" (Slaves) and cannot create tasks. To create the very first "Admin" (Master) account using our built-in script:
+   - Sign up via the web interface normally.
+   - Open your terminal, navigate to the `server` directory.
+   - Run the command: `npm run make-admin`.
+   - The script will ask for your registered email address. Type it in and press Enter.
+   - The system will upgrade your account! You now have full Admin privileges.
 4. **Login:** The user returns to the login screen and authenticates, landing on the Analytics Dashboard.
 
 ### Scenario 2: Admin Creates and Assigns a Task (Master Flow)
